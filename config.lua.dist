@@ -30,8 +30,8 @@ maintainModeMessage = ""
 -- NOTE: removeBeginningWeaponAmmunition: spears, arrows, bolt have endless ammo (allows training for paladins)
 -- NOTE: refundManaOnBeginningWeapons: wand of vortex and snakebite refund mana used (allows training for mages)
 -- NOTE: loginProtectionTime in MS
-worldType = "retro-pvp"
-hotkeyAimbotEnabled = true
+worldType = "no-pvp"
+hotkeyAimbotEnabled = false
 protectionLevel = 7
 pzLocked = 60 * 1000
 removeChargesFromRunes = true
@@ -100,9 +100,9 @@ maxExivaWhitelist = 100
 
 -- Player base critical
 -- NOTE: 0.05 means 5%
-playerBaseCriticalChance = 0.05
+playerBaseCriticalChance = 0.0
 -- NOTE: 0.1 means 10%
-playerBaseCriticalDamage = 0.1
+playerBaseCriticalDamage = 0.0
 
 -- Weapon Proficiency
 weaponProficiencyMaxLevels = 10
@@ -111,7 +111,7 @@ weaponProficiencyMaxPerksPerLevel = 6
 -- NOTE: 1.0 = normal progression, 2.0 = 2x faster, 0.5 = half speed, 0 = disabled.
 -- NOTE: values below 1.0 reduce XP; values above 1.0 increase XP.
 -- For full documentation see: https://github.com/opentibiabr/canary/blob/main/docs/systems/weapon-proficiency.md
-weaponProficiencyGainMultiplier = 0.33
+weaponProficiencyGainMultiplier = 0.0
 
 -- Animus Mastery - SoulPit (Get more info in: https://github.com/opentibiabr/canary/pull/3230)
 -- NOTE: animusMasteryMaxMonsterXpMultiplier is the maximum experience the multiplier can be.
@@ -120,8 +120,8 @@ weaponProficiencyGainMultiplier = 0.33
 -- the player has the animus mastery unlocked.
 -- NOTE: animusMasteryMonstersToIncreaseXpMultiplier is the amount of monster to increase the experience multiplier by 'animusMasteryMonstersXpMultiplier'.
 animusMasteryMaxMonsterXpMultiplier = 4.0
-animusMasteryMonsterXpMultiplier = 2.0
-animusMasteryMonstersXpMultiplier = 0.1
+animusMasteryMonsterXpMultiplier = 0.0
+animusMasteryMonstersXpMultiplier = 0.0
 animusMasteryMonstersToIncreaseXpMultiplier = 10
 
 -- Augments System (Get more info in: https://github.com/opentibiabr/canary/pull/2602)
@@ -141,7 +141,7 @@ augmentStrongImpactPercent = 10
 -- NOTE: preyBonusRerollPrice: Price to manually reroll bonus type and to enable automatic reroll.
 -- NOTE: preyBonusTime: Time in seconds that players will have of prey bonus.
 -- NOTE: preyFreeRerollTime: Time in seconds that players will have to wait to get a new free prey list.
-preySystemEnabled = true
+preySystemEnabled = false
 preyFreeThirdSlot = false
 preyRerollPricePerLevel = 200
 preySelectListPrice = 5
@@ -153,7 +153,7 @@ preyFreeRerollTime = 20 * 60 * 60
 -- NOTE: taskHuntingLimitedTasksExhaust: Time to wait to select a new creature on the task hunting slot after claiming the reward.
 -- NOTE: taskHuntingRerollPricePerLevel: Price multiplier in gold coin for rerolling task hunting list.
 -- NOTE: taskHuntingFreeRerollTime: Time in seconds that players will have to wait to get a new free task hunting list.
-taskHuntingSystemEnabled = true
+taskHuntingSystemEnabled = false
 taskHuntingFreeThirdSlot = false
 taskHuntingLimitedTasksExhaust = 20 * 60 * 60
 taskHuntingRerollPricePerLevel = 200
@@ -183,8 +183,8 @@ forgeTierLossReduction = 50
 forgeAmountMultiplier = 3
 forgeMinSlivers = 3
 forgeMaxSlivers = 7
-forgeInfluencedLimit = 300
-forgeFiendishLimit = 4
+forgeInfluencedLimit = 0
+forgeFiendishLimit = 0
 forgeFiendishIntervalType = "hour"
 forgeFiendishIntervalTime = "1"
 
@@ -216,12 +216,12 @@ transcendenceAvatarDuration = 7000
 bestiaryKillMultiplier = 1
 bosstiaryKillMultiplier = 1
 bestiaryRateCharmShopPrice  = 1.0
-boostedBossSlot = true
+boostedBossSlot = false
 boostedBossLootBonus = 250
 boostedBossKillBonus = 3
 
 -- Hazard system
-toogleHazardSystem = true
+toogleHazardSystem = false
 hazardCriticalInterval = 2000
 hazardCriticalChance = 750
 hazardCriticalMultiplier = 25
@@ -237,7 +237,7 @@ hazardPodsDamage = 5
 hazardSpawnPlunderMultiplier = 25
 
 -- Loyalty system
-loyaltyEnabled = true
+loyaltyEnabled = false
 loyaltyPointsPerCreationDay = 1
 loyaltyPointsPerPremiumDaySpent = 0
 loyaltyPointsPerPremiumDayPurchased = 0
@@ -253,7 +253,7 @@ pvpMaxLevelDifference = 0
 -- Wheel of destiny system
 -- NOTE: set wheelSystemEnabled = false to disable the wheel of destiny
 -- NOTE: only the wheel points are modified, all other data is on the client executable and cannot be modified
-wheelSystemEnabled = true
+wheelSystemEnabled = false
 wheelPointsPerLevel = 1
 -- NOTE: monkQuestTotalShrines uses the same completion threshold used by the server storage check.
 monkQuestTotalShrines = 11
@@ -273,7 +273,7 @@ wheelAtelierRevealGreaterCost = 6000000
 -- Only change it here if you know what you are doing or to make testing easier with familiars
 familiarTime = 30
 
-partyAutoShareExperience = true
+partyAutoShareExperience = false
 -- partyShareRangeMultiplier: the range of the party share experience, default 3/2 (1.5)
 partyShareRangeMultiplier = 1.5
 partyShareLootBoosts = false
@@ -377,7 +377,7 @@ freeQuestStage = 1
 -- NOTE: Leave deathLosePercent as -1 if you want to use the default
 -- death penalty formula. For the old formula, set it to 10. For
 -- no skill/experience loss, set it to 0.
-deathLosePercent = -1
+deathLosePercent = 10
 leavePartyOnDeath = false
 
 -- Houses
@@ -391,7 +391,7 @@ Setting this to false may pose risks; if a house is abandoned and contains a lar
 -- NOTE: When toggleCyclopediaHouseAuction = true, the !buyhouse commmand does not work.
 -- Periods: daily/weekly/monthly/yearly/never
 -- Base: sqm,rent,sqm+rent
-toggleCyclopediaHouseAuction = true
+toggleCyclopediaHouseAuction = false
 daysToCloseBid = 7
 housePriceRentMultiplier = 0.0
 housePriceEachSQM = 1000
@@ -465,7 +465,7 @@ temporaryConst= 2
 parallelism = 2
 
 -- Session Auth
-authType = "password" -- 'session' | 'password'
+authType = "session" -- 'session' | 'password'
 resetSessionsOnStartup = false
 
 -- Misc.
@@ -473,7 +473,7 @@ resetSessionsOnStartup = false
 -- NOTE: disableLegacyRaids: set to true to disable legacy XML raids
 allowChangeOutfit = true
 toggleMountInProtectionZone = false
-freePremium = false
+freePremium = true
 kickIdlePlayerAfterMinutes = 15
 maxMessageBuffer = 4
 toggleLearnSpells = true
@@ -481,7 +481,7 @@ emoteSpells = false
 allowWalkthrough = true
 coinPacketSize = 25
 coinImagesURL = "http://127.0.0.1/images/store/"
-classicAttackSpeed = false
+classicAttackSpeed = true
 showScriptsLogInConsole = false
 luaStartupLoadTelemetry = false
 luaScriptBytecodeCache = true
@@ -539,7 +539,7 @@ combatChainSkillFormulaFist = 1.1
 -- NOTE: set livestreamExperienceMultiplier to 1.0 to disable the experience bonus.
 -- NOTE: set livestreamMaximumViewers to 0 for no global viewer limit.
 -- NOTE: use livestreamPremiumMaximumViewers or a positive livestreamMaximumViewers value to restrict viewer counts.
-livestreamExperienceMultiplier = 1.15
+livestreamExperienceMultiplier = 1.0
 livestreamMaximumViewersPerIP = 2
 livestreamMaximumViewers = 10
 livestreamPremiumMaximumViewers = 20
@@ -566,7 +566,7 @@ sortLootByChance = false
 -- To configure rates see file data/stages.lua
 -- lowLevelBonusExp works up to level 50
 rateUseStages = false
-lowLevelBonusExp = 50
+lowLevelBonusExp = 0
 rateExp = 1
 rateSkill = 1
 rateLoot = 1
@@ -612,7 +612,7 @@ deSpawnRange = 2
 deSpawnRadius = 50
 
 -- Stamina
-staminaSystem = true
+staminaSystem = false
 
 -- Scripts
 warnUnsafeScripts = true
@@ -661,7 +661,7 @@ vipKeepHouse = false
 
 -- NOTE: set rewardChestCollectEnabled to true to enable the reward collect system
 -- NOTE set rewardChestMaxCollectItems max items per collect action
-rewardChestCollectEnabled = true
+rewardChestCollectEnabled = false
 rewardChestMaxCollectItems = 200
 
 -- Metrics
